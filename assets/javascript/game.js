@@ -46,10 +46,13 @@ $(document).ready(function() {
     var htmlChooseCharacterSection = $("#choose-character-section");
     var htmlChooseCharacterButtonHolder = $("#choose-character-button-holder");
     var htmlBattleSection = $("#battle-section");
+    htmlBattleSection.hide();
     var htmlYourCharacterSection = $("#your-character-section");
     var htmlYourEnemiesSection = $("#your-enemies-section");
     var htmlFightSection = $("#fight-section");
+    htmlFightSection.hide();
     var htmlDefenderSection = $("#defender-section");
+    htmlDefenderSection.hide();
     var htmlDefender = $("#defender");
     var lostSection = $("#lost-section");
     var wonSection = $("#won-section");
@@ -65,6 +68,8 @@ $(document).ready(function() {
 
     //Listens to the user choosing it's character, then calls the defender select function
     htmlChooseCharacterButtonHolder.click(function(event){
+        htmlChooseCharacterSection.hide();
+        htmlBattleSection.show();
         userCharacter = event.target.id; //Gets the character's name
         userCharacterButton = event.target; //Gets the character's container (button)
 
@@ -80,6 +85,8 @@ $(document).ready(function() {
 
     //Function called to select defender
     function selectDefender(pDefenderCharacterButton){
+        htmlDefenderSection.show();
+        htmlFightSection.show();
         if (htmlDefender.contents().length == 0) { //Makes sure only one character is "defender" at a time
             defenderCharacter = pDefenderCharacterButton.target.id; //Gets the enemy's name
             defenderCharacterButton = pDefenderCharacterButton.target; //Get's the enemy's container (button)
@@ -97,10 +104,19 @@ $(document).ready(function() {
     }
 
     function gameOverLost() {
-        lostSection.show();
+        if(htmlYourEnemiesSection.contents().children().length > 0) {
+            htmlFightSection.hide();
+            lostSection.show();
+        } else {
+            $("#enemies-to-attack").hide();
+            htmlFightSection.hide();
+            lostSection.show();
+        }
     }
 
     function gameOverWin() {
+        $("#enemies-to-attack").hide();
+        htmlFightSection.hide();
         wonSection.show();
     }
 
@@ -128,7 +144,7 @@ $(document).ready(function() {
             } else {
                 if(htmlYourEnemiesSection.contents().children().length == 0) { //if there's no more enemies, you won!
                     gameOverWin();
-                } else { //if there's defenders, bring the next one!
+                } else {
                     //Once defender rans out of HP, remove it
                     defenderCharacter = "";
                     defenderCharacterButton = "";

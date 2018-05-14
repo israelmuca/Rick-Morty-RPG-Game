@@ -19,3 +19,29 @@
 #meeseeks {
     background-image: url('../images/Mr_Meeseeks.png');
 }
+
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footer-image {
+    width: 400px;
+    height: auto;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+}
+
+@font-face {
+    font-family: "Calligraphr Regular";
+    src: url("../font/Calligraphr-Regular.ttf");
+}
+
+body {
+    font-family: 'Calligraphr Regular';
+    font-size: 1.2rem;
+}

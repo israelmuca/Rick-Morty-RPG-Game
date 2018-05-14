@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <h1>Rick and Morty RPG</h1>
+    <img src="assets/images/logo.png" alt="Rick and Morty logo" id="logo">
 
     <!-- All the characters are dinamically loaded to the appropiate parts of the DOM -->
     <div id="choose-character-section">
@@ -19,13 +19,13 @@
     <div id="battle-section">
         <h2>Your character</h2>
         <div id="your-character-section"></div>
-        <h2>Enemies available to attack</h2>
+        <h2 id="enemies-to-attack">Enemies available to attack</h2>
         <div id="your-enemies-section"></div>
     </div>
 
     <div id="fight-section">
-        <h2>Fight Section</h2>
-        <button id="attack">Attack!</button>
+        <h2>Choose your attack!</h2>
+        <button id="attack">Regular hit!</button>
     </div>
     
     <div id="defender-section">
@@ -52,6 +52,8 @@
         <button id="grom" class="character" data-hp="100" data-attack="7" data-counter-attack="20"></button>
         <button id="meeseeks" class="character" data-hp="120" data-attack="9" data-counter-attack="10"></button>
     </div>
+
+    <img src="assets/images/portal.jpg" id="footer-image">
 
     <!-- Import jQuert and custom JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
