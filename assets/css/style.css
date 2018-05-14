@@ -1,7 +1,10 @@
 .character {
     display: inline-block;
-    height: 115px;
-    width: 130px;
+    height: 165px;
+    width: 180px;
+    background-repeat: no-repeat;
+    background-position: center; 
+    border: solid 2px green;
 }
 
 #rick {

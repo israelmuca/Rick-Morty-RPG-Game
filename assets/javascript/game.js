@@ -26,8 +26,9 @@
 
 
 TO DO:
-- Get a proper UI
 - Add the stats to the padding of the buttons
+- Modify the padding's text and border color depending on where the button is
+- Change the attack and restart button to something nicer
 */
 
 //Global variables
