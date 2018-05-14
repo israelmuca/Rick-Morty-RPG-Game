@@ -10,21 +10,17 @@
 <body>
     <h1>Rick and Morty RPG</h1>
 
+    <!-- All the characters are dinamically loaded to the appropiate parts of the DOM -->
     <div id="choose-character-section">
         <h2>Choose your character</h2>
-        <button id="character-1-chooser"></button>
-        <button id="character-2-chooser"></button>
-        <button id="character-3-chooser"></button>
-        <button id="character-4-chooser"></button>
+        <div id="choose-character-button-holder"></div>
     </div>
 
     <div id="battle-section">
         <h2>Your character</h2>
-        <button id="your-character"></button>
+        <div id="your-character-section"></div>
         <h2>Enemies available to attack</h2>
-        <button id="enemy-1"></button>
-        <button id="enemy-2"></button>
-        <button id="enemy-3"></button>
+        <div id="your-enemies-section"></div>
     </div>
 
     <div id="fight-section">
@@ -34,7 +30,15 @@
     
     <div id="defender-section">
         <h2>Defender</h2>
-        <button id="defender"></button>
+        <div id="defender"></div>
+    </div>
+
+    <!-- HTML to store the character's -->
+    <div id="characters-container">
+        <button id="rick" class="character"></button>
+        <button id="morty" class="character"></button>
+        <button id="grom" class="character"></button>
+        <button id="meeseeks" class="character"></button>
     </div>
 
     <!-- Import jQuert and custom JS -->

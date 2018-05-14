@@ -1,15 +1,21 @@
-#rick {
+.character {
+    display: inline-block;
+    height: 115px;
+    width: 130px;
+}
 
+#rick {
+    background-image: url('../images/Rick_Sanchez.png');
 }
 
 #morty {
-
+    background-image: url('../images/Morty_Smith.jpg');
 }
 
-#terry {
-
+#grom {
+    background-image: url('../images/Gromflomite.png');
 }
 
 #meeseeks {
-    
+    background-image: url('../images/Mr_Meeseeks.png');
 }
