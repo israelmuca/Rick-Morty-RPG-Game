@@ -11,6 +11,11 @@
 */
 
 //Global variables
+//Set variables for the user's choices
+var userCharacter;
+var userCharacterButton;
+var defenderCharacter;
+var defenderCharacterButton;
 
 //Make sure the document is loaded, then...
 $(document).ready(function() {
@@ -33,17 +38,25 @@ $(document).ready(function() {
 
     //Listens to the user choosing it's character
     htmlChooseCharacterButtonHolder.click(function(event){
-        var userCharacter = event.target.id; //Gets the character's name
-        var userCharacterButton = event.target; //Gets the character's container (button)
+        userCharacter = event.target.id; //Gets the character's name
+        userCharacterButton = event.target; //Gets the character's container (button)
 
         htmlYourCharacterSection.append(userCharacterButton); //Moves the user's choice to "Your Character" section
+        //Change the CSS of the user's choice
         htmlYourEnemiesSection.append(htmlCharactersContainer); //Moves the rest of the choices to the "Your Enemies" section
+        //Change the CSS of the enemies
 
         htmlYourEnemiesSection.click(function(event){
-            var enemyCharacter = event.target.id; //Gets the enemy's name
-            var enemyCharacterButton = event.target; //Get's the enemy's container (button)
+            defenderCharacter = event.target.id; //Gets the enemy's name
+            defenderCharacterButton = event.target; //Get's the enemy's container (button)
 
-            htmlDefender.append(enemyCharacterButton); //Moves the chosen enemy to "Defender" section
+            htmlDefender.append(defenderCharacterButton); //Moves the chosen enemy to "Defender" section
+            //Change the CSS of the current defender
+            startGame(); //Once all choosings have been done start the game
         });
     });
+
+    function startGame() {
+
+    }
 } );
