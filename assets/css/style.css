@@ -1,3 +1,45 @@
+@font-face {
+  font-family: "Calligraphr Regular";
+  src: url("../font/Calligraphr-Regular.ttf");
+}
+
+body {
+  font-family: 'Calligraphr Regular' !important;
+  font-size: 1.2rem;
+}
+
+#rick {
+  background-image: url('../images/Rick_Sanchez.png');
+}
+
+#morty {
+  background-image: url('../images/Morty_Smith.jpg');
+}
+
+#grom {
+  background-image: url('../images/Gromflomite.png');
+}
+
+#meeseeks {
+  background-image: url('../images/Mr_Meeseeks.png');
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer-image {
+  width: 400px;
+  height: auto;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+}
+
 .character {
     display: inline-block;
     height: 165px;
@@ -5,46 +47,4 @@
     background-repeat: no-repeat;
     background-position: center; 
     border: solid 2px green;
-}
-
-#rick {
-    background-image: url('../images/Rick_Sanchez.png');
-}
-
-#morty {
-    background-image: url('../images/Morty_Smith.jpg');
-}
-
-#grom {
-    background-image: url('../images/Gromflomite.png');
-}
-
-#meeseeks {
-    background-image: url('../images/Mr_Meeseeks.png');
-}
-
-#logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#footer-image {
-    width: 400px;
-    height: auto;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    position: fixed;
-    right: 5px;
-    bottom: 5px;
-}
-
-@font-face {
-    font-family: "Calligraphr Regular";
-    src: url("../font/Calligraphr-Regular.ttf");
-}
-
-body {
-    font-family: 'Calligraphr Regular';
-    font-size: 1.2rem;
 }

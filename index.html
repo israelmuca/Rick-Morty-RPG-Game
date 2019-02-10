@@ -5,58 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rick and Morty RPG Game</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
-<body>
-    <img src="assets/images/logo.png" alt="Rick and Morty logo" id="logo">
+<body class="container">
+    <img src="./assets/images/logo.png" alt="Rick and Morty logo" id="logo">
 
     <!-- All the characters are dinamically loaded to the appropiate parts of the DOM -->
     <div id="choose-character-section">
-        <h2>Choose your character</h2>
+        <h2>Choose your character:</h2>
         <div id="choose-character-button-holder"></div>
     </div>
 
     <div id="battle-section">
-        <h2>Your character</h2>
+        <h2>Your character:</h2>
         <div id="your-character-section"></div>
-        <h2 id="enemies-to-attack">Enemies available to attack</h2>
+        <h2 id="enemies-to-attack">Enemies available to attack:</h2>
         <div id="your-enemies-section"></div>
     </div>
 
     <div id="fight-section">
-        <h2>Choose your attack!</h2>
-        <button id="attack">Regular hit!</button>
+        <h2>Choose your attack:</h2>
+        <button type="button" class ="btn btn-primary" id="attack">Regular hit!</button>
     </div>
     
     <div id="defender-section">
-        <h2>Defender</h2>
+        <h2>Defender:</h2>
         <div id="defender"></div>
     </div>
 
     <div id="lost-section">
         <p>You have been defeated...</p>
         <br>
-        <button class="restart">Restart Game!</button>
+        <button type="button" class="btn btn-danger restart">Restart Game!</button>
     </div>
 
     <div id="won-section">
         <p>You have won!</p>
         <br>
-        <button class="restart">Restart Game!</button>
+        <button type="button" class="btn btn-success restart">Restart Game!</button>
     </div>
 
     <!-- HTML to store the characters -->
     <div id="characters-container">
-        <button id="rick" class="character" data-hp="180" data-attack="25" data-counter-attack="25" data-name="Rick Sanchez"></button>
-        <button id="morty" class="character" data-hp="150" data-attack="5" data-counter-attack="20" data-name="Morty Smith"></button>
-        <button id="grom" class="character" data-hp="100" data-attack="7" data-counter-attack="20" data-name="Canklanker Thom"></button>
-        <button id="meeseeks" class="character" data-hp="120" data-attack="9" data-counter-attack="10" data-name="Mr. Meeseeks"></button>
+        <button type="button" id="rick" class="character" data-hp="180" data-attack="25" data-counter-attack="25" data-name="Rick Sanchez"></button>
+        <button type="button" id="morty" class="character" data-hp="150" data-attack="5" data-counter-attack="20" data-name="Morty Smith"></button>
+        <button type="button" id="grom" class="character" data-hp="100" data-attack="7" data-counter-attack="20" data-name="Canklanker Thom"></button>
+        <button type="button" id="meeseeks" class="character" data-hp="120" data-attack="9" data-counter-attack="10" data-name="Mr. Meeseeks"></button>
     </div>
 
     <img src="assets/images/portal.jpg" id="footer-image">
 
     <!-- Import jQuert and custom JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="assets/javascript/game.js"></script>
+    <script src="./assets/javascript/game.js"></script>
 </body>
 </html>
